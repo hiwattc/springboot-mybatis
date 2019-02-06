@@ -1,5 +1,5 @@
 /**
- *    Copyright 2015-2017 the original author or authors.
+ *    Copyright 2015-2019 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -13,27 +13,18 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package com.staroot.mybatis.dao;
+package com.staroot.mybatis.mapper;
 
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.stereotype.Component;
+import org.apache.ibatis.annotations.Mapper;
 
 import com.staroot.mybatis.domain.City;
 
 /**
- * @author Eddú Meléndez
+ * @author Eduardo Macarron
  */
-@Component
-public class CityDao {
+@Mapper
+public interface CityMapper {
 
-	private final SqlSession sqlSession;
-
-	public CityDao(SqlSession sqlSession) {
-		this.sqlSession = sqlSession;
-	}
-
-	public City selectCityById(long id) {
-		return this.sqlSession.selectOne("selectCityById", id);
-	}
+	City selectCityById(int cityId);
 
 }

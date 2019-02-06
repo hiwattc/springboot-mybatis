@@ -3,7 +3,6 @@ package com.staroot.mybatis.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.staroot.mybatis.domain.User;
-import com.staroot.mybatis.web.HttpSessionUtil;
 
 
 
@@ -24,19 +22,9 @@ public class UserController {
 	
 	List<User> users = new ArrayList<User>();
 
+	@Autowired
+	//private UserRepository userRepository;
 
-	
-	
-	@GetMapping("/logintest")
-	public String login(HttpSession session, HttpServletRequest request) {
-		User user = new User();
-		user.setUserId("1");
-		user.setName("hiwatt");
-		session.removeAttribute(HttpSessionUtil.LOGIN_FAILED_CNT_KEY);
-		session.setAttribute(HttpSessionUtil.USER_SESSION_KEY, user);
-
-		return "redirect:/"; 
-	}
 	/*
 	@GetMapping("/login")
 	public String login(HttpServletRequest request,Model model) {
