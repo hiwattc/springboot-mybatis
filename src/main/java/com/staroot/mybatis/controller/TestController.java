@@ -69,6 +69,16 @@ public class TestController {
 	    System.out.println("city:"+city.getCountry());
 	    return "/index";
 	}
+	@GetMapping("/test3")
+	public String getTest3(HttpServletRequest request,Model model) {
+		logger.debug("33333333333333333TestController is called :: called function : getTest1");
+		logger.debug("33333333333333333TestController Properties Reading TEST [MESSAGE] :"+MESSAGE);
+		logger.debug("33333333333333333TestController Properties Reading TEST [TITLE] :"+TITLE);
+	    Hotel hotel = new Hotel();
+	    hotel = hotelMapper.selectByCityId(1);
+	    return "index";
+	}
+	
 	
 	@ApiOperation(value ="메시지조회하기(alert)-api custom test 18.12.15")
     @ApiImplicitParams({
