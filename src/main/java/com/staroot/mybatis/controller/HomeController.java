@@ -45,7 +45,7 @@ public class HomeController {
 		logger.debug("=====================HomeController is called=====================");
 		return "index";
 	}	
-	/*
+	
 	// test 5xx errors
 	@RequestMapping("/5xx")
 	public String ServiceUnavailable() {
@@ -56,7 +56,7 @@ public class HomeController {
 	public String ServiceUnavailable2() {
 		throw new RuntimeException("4xx");
 	}
-	*/
+	
 	/*
 	@RequestMapping("/error")
 	public String Error() {
