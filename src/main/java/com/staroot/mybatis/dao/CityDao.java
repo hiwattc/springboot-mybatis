@@ -35,5 +35,11 @@ public class CityDao {
 	public City selectCityById(long id) {
 		return this.sqlSession.selectOne("selectCityById", id);
 	}
+	public City selectCityById_with_out_mapper(long id) {
+		return this.sqlSession.selectOne("selectCityById_with_out_mapper", id);
+	}
+	public City findByState(String state) {
+		return this.sqlSession.selectOne("findByState", state);
+	}
 
 }

@@ -25,16 +25,24 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.staroot.mybatis.domain.City;
+import com.staroot.mybatis.mapper.CityAnnotationMapper;
+import com.staroot.mybatis.mapper.CityMapper;
 
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@Import(CityDao.class)
+//@Import(CityDao.class)
 public class CityDaoTest {
 
   @Autowired
   private CityDao cityDao;
 
+  @Autowired
+  private CityMapper cityMapper;
+  
+  @Autowired
+  private CityAnnotationMapper cityAnnotationMapper;
+  
   @Test
   public void selectCityByIdTest() {
     City city = cityDao.selectCityById(1);
@@ -42,5 +50,29 @@ public class CityDaoTest {
     assertThat(city.getState()).isEqualTo("CA");
     assertThat(city.getCountry()).isEqualTo("US");
   }
+  @Test
+  public void selectCityByIdMapperTest() {
+    City city = cityMapper.selectCityById(1);
+    System.out.println("********** cityMapper From : "+ city.getName());
+    assertThat(city.getName()).isEqualTo("San Francisco");
+    assertThat(city.getState()).isEqualTo("CA");
+    assertThat(city.getCountry()).isEqualTo("US");
+  }
+  @Test
+  public void selectCityById_with_out_mapperTest() {
+    City city = cityDao.selectCityById_with_out_mapper(1);
+    assertThat(city.getName()).isEqualTo("San Francisco");
+    assertThat(city.getState()).isEqualTo("CA");
+    assertThat(city.getCountry()).isEqualTo("US");
+  }
+  @Test
+  public void selectCityByIdAnnotationMapperTest() {
+    City city = cityAnnotationMapper.selectCityByIdAnnotation(1);
+    System.out.println("********** cityMapper From : "+ city.getName());
+    assertThat(city.getName()).isEqualTo("San Francisco");
+    assertThat(city.getState()).isEqualTo("CA");
+    assertThat(city.getCountry()).isEqualTo("US");
+  }
+    
 
 }
