@@ -25,6 +25,7 @@ import com.staroot.mybatis.domain.Hotel;
 @Mapper
 public interface HotelMapper {
 
+
 	Hotel selectByCityId(int cityId);
 
 }

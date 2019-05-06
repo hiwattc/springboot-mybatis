@@ -24,6 +24,7 @@ import com.staroot.mybatis.domain.City;
  */
 @Mapper
 public interface CityMapper {
+	
 
 	City selectCityById(int cityId);
 

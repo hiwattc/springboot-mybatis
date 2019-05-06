@@ -15,10 +15,10 @@
  */
 package com.staroot.mybatis.dao;
 
+import com.staroot.mybatis.domain.City;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Component;
-
-import com.staroot.mybatis.domain.City;
 
 /**
  * @author Eddú Meléndez
