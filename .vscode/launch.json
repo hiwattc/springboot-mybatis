@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BootTrainingMybatisApplication<boot-training-mybatis>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.staroot.BootTrainingMybatisApplication",
+            "projectName": "boot-training-mybatis",
+            "args": ""
+        }
+    ]
+}

@@ -23,8 +23,14 @@
     <typeAliases>
         <package name="com.staroot.mybatis.domain"/>
     </typeAliases>
+    <!-- 
     <mappers>
         <mapper resource="com/staroot/mybatis/mapper/CityMapper.xml"/>
         <mapper resource="com/staroot/mybatis/mapper/HotelMapper.xml"/>
+    </mappers>
+     -->
+    <mappers>
+        <mapper resource="mybatis/mapper/CityMapper.xml"/>
+        <mapper resource="mybatis/mapper/HotelMapper.xml"/>
     </mappers>
 </configuration>
