@@ -81,6 +81,7 @@ public class TestController {
 	@GetMapping("/test4")
 	public String getTest4(HttpServletRequest request,Model model) {
 		logger.debug("ffffff :: called function : getTest4");
+		logger.debug("ffffff :: called function : getTest4");
 		return "index";
 
 	}
