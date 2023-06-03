@@ -85,6 +85,7 @@ public class TestController {
 		logger.debug("ffffff :: called function : getTest4");
 		logger.debug("ffffff :: called function : getTest4");
 		logger.debug("ffffff :: called function : getTest4");
+		logger.debug("ffffff :: called function : getTest4");
 		return "index";
 
 	}
