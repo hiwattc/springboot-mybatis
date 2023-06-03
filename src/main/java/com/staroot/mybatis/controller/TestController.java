@@ -82,6 +82,7 @@ public class TestController {
 	public String getTest4(HttpServletRequest request,Model model) {
 		logger.debug("ffffff :: called function : getTest4");
 		logger.debug("ffffff :: called function : getTest4");
+		logger.debug("ffffff :: called function : getTest4");
 		return "index";
 
 	}
