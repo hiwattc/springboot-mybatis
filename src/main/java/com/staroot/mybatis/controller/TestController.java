@@ -78,6 +78,12 @@ public class TestController {
 	    hotel = hotelMapper.selectByCityId(1);
 	    return "index";
 	}
+	@GetMapping("/test4")
+	public String getTest4(HttpServletRequest request,Model model) {
+		logger.debug("ffffff :: called function : getTest4");
+		return "index";
+
+	}
 	
 	
 	@ApiOperation(value ="메시지조회하기(alert)-api custom test 18.12.15")
